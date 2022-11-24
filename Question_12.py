@@ -82,4 +82,4 @@ n.lopf(n.snapshots,
 #print(network.objective/1000000) #in 10^6 €
 print((n.objective/n.loads_t.p.sum())*5/8760) # €/MWh
 
-print (n.generators.p_nom_opt/1000000000) # in GW
+print (n.generators.p_nom_opt/1000000) # in MW
