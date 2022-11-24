@@ -57,4 +57,4 @@ network.lopf(network.snapshots,
              solver_name='gurobi')
 #print(network.objective/1000000) #in 10^6 €
 print((network.objective/network.loads_t.p.sum())*5/8760) # €/MWh
-print ((network.generators.p_nom_opt)/1000000000) # in GW
+print ((network.generators.p_nom_opt)/1000000) # in MW
