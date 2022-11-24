@@ -1,7 +1,6 @@
 import pypsa
-
 import pandas as pd
-
+#Question 11
 network = pypsa.Network()
 hours_needed = pd.date_range('2015-01-01T00:00Z','2015-01-01T4:00Z', freq='H')
 network.set_snapshots(hours_needed)
@@ -59,4 +58,4 @@ network.lopf(network.snapshots,
 #print(network.objective/1000000) #in 10^6 €
 print((network.objective/network.loads_t.p.sum())*5/8760) # €/MWh
 
-print (network.generators.p_nom_opt/1000000000) # in GW
+print (network.generators.p_nom_opt/1000000) # in MW
